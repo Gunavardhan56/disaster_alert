@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core System Colors */
+    --color-background: #0F172A; /* slate-900 */
+    --color-foreground: #F8FAFC; /* slate-50 */
+    --color-border: rgba(148, 163, 184, 0.2); /* slate-400 with opacity */
+    --color-input: #1E293B; /* slate-800 */
+    --color-ring: #DC2626; /* red-600 */
+    
+    /* Card & Surface Colors */
+    --color-card: #1E293B; /* slate-800 */
+    --color-card-foreground: #F8FAFC; /* slate-50 */
+    --color-popover: #1E293B; /* slate-800 */
+    --color-popover-foreground: #F8FAFC; /* slate-50 */
+    
+    /* Muted Colors */
+    --color-muted: #334155; /* slate-700 */
+    --color-muted-foreground: #94A3B8; /* slate-400 */
+    
+    /* Primary Colors - Critical Alert Red */
+    --color-primary: #DC2626; /* red-600 */
+    --color-primary-foreground: #FFFFFF; /* white */
+    
+    /* Secondary Colors - Stable Operational Blue */
+    --color-secondary: #1E40AF; /* blue-700 */
+    --color-secondary-foreground: #FFFFFF; /* white */
+    
+    /* Destructive Colors - System Error Red */
+    --color-destructive: #B91C1C; /* red-700 */
+    --color-destructive-foreground: #FFFFFF; /* white */
+    
+    /* Accent Colors - Warning Amber */
+    --color-accent: #F59E0B; /* amber-500 */
+    --color-accent-foreground: #0F172A; /* slate-900 */
+    
+    /* Success Colors - Operational Green */
+    --color-success: #059669; /* emerald-600 */
+    --color-success-foreground: #FFFFFF; /* white */
+    
+    /* Warning Colors - Attention Orange */
+    --color-warning: #D97706; /* amber-600 */
+    --color-warning-foreground: #FFFFFF; /* white */
+    
+    /* Error Colors - System Error Red */
+    --color-error: #B91C1C; /* red-700 */
+    --color-error-foreground: #FFFFFF; /* white */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+  }
+  
+  .font-data {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
